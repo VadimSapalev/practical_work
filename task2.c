@@ -12,21 +12,25 @@ int lcm(int a, int b) {
 }
 
 int main() {
-    int n;
+    int p;
     printf("Input size: ");
-    scanf("%d", &n);
-
-    int nums[n];
-    for (int i = 0; i < n; i++) {
-        scanf("%d", &nums[i]);
+    scanf("%d", &p);
+    
+    if (p >= 2 && p <=20) {
+        int nums[p];
+        for (int i = 0; i < p; i++) {
+            scanf("%d", &nums[i]);
+        }
+    
+        int result = nums[0];
+        for (int i = 1; i < p; i++) {
+            result = lcm(result, nums[i]);
+        }
+    
+        printf("%d\n", result);
     }
-
-    int result = nums[0];
-    for (int i = 1; i < n; i++) {
-        result = lcm(result, nums[i]);
+    else {
+        printf("Not supported size");
     }
-
-    printf("%d\n", result);
-
     return 0;
 }
