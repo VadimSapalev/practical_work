@@ -13,7 +13,7 @@ int lcm(int a, int b) {
 
 int main() {
     int n;
-    printf("Input size");
+    printf("Input size: ");
     scanf("%d", &n);
 
     int nums[n];
